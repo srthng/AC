@@ -16,18 +16,17 @@ export class HomePage {
   message: string = '';
   secretKey: string = 'skibidigragas';
   encryptedMessage: string = '';
-  encryptedKey: string = '';
 
-  encryptMessage() {
+
+  sendData(){
     if (this.message && this.secretKey) {
       const encrypted = CryptoJS.AES.encrypt(this.message, this.secretKey).toString();
       this.encryptedMessage = encrypted;
     }
+    if(this.encryptedMessage){
+      const encodedMessage = encodeURIComponent(this.encryptedMessage);
+      this.router.navigateByUrl
+      (`/tela2/${encodedMessage}`);
+    }
   }
-
-  sendData(){
-    this.router.navigateByUrl
-    (`/tela2/${this.encryptMessage}`)
-  }
-
 }

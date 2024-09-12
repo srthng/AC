@@ -6,7 +6,13 @@
 
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-label position="floating">Mensagem encriptada</ion-label>
-    <ion-label position="floating">{{encryptedMessage}}</ion-label>
+    <ion-label>Mensagem encriptada</ion-label>
+    <ion-label>{{encryptedMessage}}</ion-label>
   </ion-item>
+  <ion-item>
+    <ion-label> Chave da criptografia</ion-label>
+    <ion-input [(ngModel)]="secretKey" type="text"></ion-input>
+    <ion-button expand="full" style="width: 160px;" (click)="decrypt()">Descriptografar</ion-button>
+  </ion-item>
+  <ion-label>{{decryptedMessage}}</ion-label>
 </ion-content>
