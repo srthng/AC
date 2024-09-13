@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'tela2/:encryptedMessage',
+    path: 'tela2/:encryptedMessage/:encryptedEmail/:encryptedName',
     loadChildren: () => import('./tela2/tela2.module').then( m => m.Tela2PageModule)
   },
 

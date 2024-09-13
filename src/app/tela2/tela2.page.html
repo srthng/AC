@@ -14,5 +14,9 @@
     <ion-input [(ngModel)]="secretKey" type="text"></ion-input>
     <ion-button expand="full" style="width: 160px;" (click)="decrypt()">Descriptografar</ion-button>
   </ion-item>
-  <ion-label>{{decryptedMessage}}</ion-label>
+  <ion-item>  
+    <ion-label>{{decryptedName}}</ion-label>
+    <ion-label>{{decryptedEmail}}</ion-label>
+    <ion-label>{{decryptedMessage}}</ion-label>
+  </ion-item>
 </ion-content>
